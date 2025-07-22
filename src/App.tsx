@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getWeatherAtCity } from './services/GetWeatherAtCity'
+import Navbar from './components/Navbar'
 
 function App() {
   const [weather, setWeather] = useState<number>(0);
@@ -20,7 +21,8 @@ function App() {
 
   return (
     <>
-      <p>Temperature in {city} is {weather}</p>
+      <Navbar></Navbar>
+            <p>Temperature in {city} is {weather}</p>
     </>
   );
 }
