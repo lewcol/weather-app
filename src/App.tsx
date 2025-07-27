@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   const [weather, setWeather] = useState<number>(0);
-  const city = "Vancouver";
+  const [city, setCity] = useState<string>("Cork");
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-            <p>Temperature in {city} is {weather}</p>
+      <p>Temperature in {city} is {weather}</p>
     </>
   );
 }

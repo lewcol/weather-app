@@ -1,16 +1,4 @@
-interface WeatherResponse {
-    main: {
-        temp: number;
-        pressure: number;
-        humidity: number;
-    };
-    weather: Array<{
-        id: number;
-        main: string;
-        description: string;
-        icon: string;
-    }>;
-}
+import type WeatherResponse from "../utils/WeatherResponse.ts";
 
 export async function getWeatherAtCity(city: string): Promise<WeatherResponse> {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}`;
